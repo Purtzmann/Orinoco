@@ -1,3 +1,8 @@
-body{
-  background: black;
-}
+@import "layout/header";
+@import "layout/nav";
+@import "layout/footer";
+@import "base/police";
+@import "themes/themes";
+@import "pages/home";
+@import "components/buttons";
+@import "pages/fiche"

@@ -1,0 +1,24 @@
+
+.footer{
+   height: 8rem;
+   background-color: #232F3E;
+   &__backTop{
+      height: 2rem;
+      background-color: #485769;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+   }
+   &__details{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      li{
+         list-style: none;
+         color: white;
+      }
+   }
+}
+
+

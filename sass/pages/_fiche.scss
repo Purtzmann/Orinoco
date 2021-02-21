@@ -1,0 +1,43 @@
+.fiche{
+   display: flex;
+   justify-content: center;
+   &__bloc{
+      width: 90%;
+      background-color: white;
+      position: relative;
+      top: -23rem;
+      display: flex;
+      flex-direction: row;
+      padding: 2rem;
+   }
+   &__details{
+      flex-direction: column;
+      width: 40%;
+      margin-left: 2rem;
+   }
+   &__couleur{
+      display: flex;
+      flex-direction: column;
+   }
+   &__nombre{
+      display: flex;
+      flex-direction: row;
+      .moins{
+         background-color: #F9A300;
+         padding: 0.3rem;
+         border-radius: 25%;
+         margin-right: 0.3rem;
+      }
+      .nbr{
+         padding: 0.3rem;
+         margin-right: 0.3rem;
+      }
+      .plus{
+         background-color: #F9A300;
+         padding: 0.3rem;
+         border-radius: 25%;
+         margin-right: 0.3rem;
+      }
+   }
+}
+
