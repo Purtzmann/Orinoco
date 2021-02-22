@@ -33,10 +33,12 @@
 .header__compte {
   display: flex;
   align-items: center;
+  color: white;
 }
 .header__panier {
   display: flex;
   align-items: center;
+  color: white;
 }
 .header i {
   font-size: larger;
