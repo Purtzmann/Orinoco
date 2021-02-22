@@ -1,14 +1,29 @@
 .fiche{
    display: flex;
    justify-content: center;
+   background-color: violet;
    &__bloc{
       width: 90%;
       background-color: white;
       position: relative;
-      top: -23rem;
+      top: 5rem;
       display: flex;
       flex-direction: row;
       padding: 2rem;
+      background-color: white;
+   }
+   &__images{
+      height: 300px;
+      width: 300px;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+   }
+   &__vignette{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-top: 1rem;
    }
    &__details{
       flex-direction: column;
@@ -22,22 +37,29 @@
    &__nombre{
       display: flex;
       flex-direction: row;
+      height: 27px;
+      width: 92px;
       .moins{
-         background-color: #F9A300;
-         padding: 0.3rem;
-         border-radius: 25%;
-         margin-right: 0.3rem;
+         margin-right: 0.5rem;
+         height: 27px;
+         padding: 5px;
+         border-radius: 50%;
       }
       .nbr{
-         padding: 0.3rem;
-         margin-right: 0.3rem;
+         margin: 4px 15px -2px 9px;
+         height: 27px;
+         border-radius: 50%;
       }
       .plus{
-         background-color: #F9A300;
-         padding: 0.3rem;
-         border-radius: 25%;
-         margin-right: 0.3rem;
+         margin-right: 0.5rem;
+         height: 27px;
+         padding: 5px;
+         border-radius:50%;
       }
    }
 }
 
+footer{
+   position: relative;
+   bottom: -10rem;
+}
