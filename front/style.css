@@ -1,0 +1,239 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+.header {
+  height: 5rem;
+  background-color: #131921;
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+.header__content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 1rem;
+}
+.header__form {
+  display: flex;
+  align-items: center;
+}
+.header__form .form__btn {
+  background-color: #F9A300;
+  padding: 0.45rem;
+  padding-right: 0.8rem;
+  padding-left: 0.8rem;
+  border-radius: 0px 10px 10px 0px;
+  box-shadow: -1px 0px 2px 0px #131921;
+}
+.header__form .bar {
+  padding: 0.6rem;
+  border-radius: 10px 0px 0px 10px;
+  border: none;
+  width: 35rem;
+}
+.header__compte {
+  display: flex;
+  align-items: center;
+  color: white;
+}
+.header__panier {
+  display: flex;
+  align-items: center;
+  color: white;
+}
+.header i {
+  font-size: larger;
+}
+.header p {
+  margin-left: 0.5rem;
+}
+
+.header__naviguation {
+  background-color: #485769;
+  margin-top: -3px;
+}
+.header__naviguation nav {
+  height: 3rem;
+  background-color: #485769;
+  display: flex;
+}
+.header__naviguation nav ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  text-align: center;
+  align-items: center;
+  color: white;
+  margin-left: -40px;
+}
+.header__naviguation nav ul li {
+  border: 1px solid white;
+  padding: 0.85rem;
+  width: 6rem;
+}
+
+.footer {
+  height: 8rem;
+  background-color: #232F3E;
+}
+.footer__backTop {
+  height: 2rem;
+  background-color: #485769;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer__details {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.footer__details li {
+  list-style: none;
+  color: white;
+}
+
+body {
+  font-family: "Roboto";
+}
+
+.links {
+  text-decoration: none;
+  color: black;
+}
+
+.pub__fond {
+  height: 30rem;
+  background-color: rgba(132, 0, 255, 0.2);
+}
+
+.produits {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  position: relative;
+  top: -15rem;
+  flex-wrap: wrap;
+}
+.produits__product {
+  height: 19rem;
+  width: 16rem;
+  background-color: white;
+  box-shadow: 0px 0px 9px 2px #BABABA;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.produits__information {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.produits__images {
+  width: 90%;
+  height: 74%;
+  overflow: hidden;
+}
+.produits__details {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: -1rem;
+}
+.produits__details--name {
+  font-weight: bold;
+}
+.produits__details--price {
+  font-size: 1.2rem;
+}
+.produits__btn {
+  position: relative;
+  bottom: 1.2rem;
+  margin-top: 10px;
+}
+
+.btn {
+  background-color: #F9A300;
+  border: none;
+  height: 40px;
+  padding: 5px 15px;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+}
+
+.fiche {
+  display: flex;
+  justify-content: center;
+  background-color: violet;
+}
+.fiche__bloc {
+  width: 90%;
+  background-color: white;
+  position: relative;
+  top: 5rem;
+  display: flex;
+  flex-direction: row;
+  padding: 2rem;
+  background-color: white;
+}
+.fiche__images {
+  height: 300px;
+  width: 300px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+.fiche__vignette {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+.fiche__details {
+  flex-direction: column;
+  width: 40%;
+  margin-left: 2rem;
+}
+.fiche__couleur {
+  display: flex;
+  flex-direction: column;
+}
+.fiche__nombre {
+  display: flex;
+  flex-direction: row;
+  height: 27px;
+  width: 92px;
+}
+.fiche__nombre .moins {
+  margin-right: 0.5rem;
+  height: 27px;
+  padding: 5px;
+  border-radius: 50%;
+}
+.fiche__nombre .nbr {
+  margin: 4px 15px -2px 9px;
+  height: 27px;
+  border-radius: 50%;
+}
+.fiche__nombre .plus {
+  margin-right: 0.5rem;
+  height: 27px;
+  padding: 5px;
+  border-radius: 50%;
+}
+
+footer {
+  position: relative;
+  bottom: -10rem;
+}
+
+/*# sourceMappingURL=style.css.map */

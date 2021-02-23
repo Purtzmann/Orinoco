@@ -1,0 +1,27 @@
+
+.header__naviguation{
+   background-color: #485769;
+   margin-top: -3px;
+   nav{
+      height: 3rem;
+      background-color: #485769;
+      display: flex;
+      ul{
+         display: flex;        
+         flex-direction: row;
+         list-style: none;
+         text-align: center;
+         align-items: center;
+         color: white;
+         margin-left: -40px;
+         li{
+            border: 1px solid white;
+            padding: 0.85rem;
+            width: 6rem;
+         }
+      }
+   }
+}
+
+
+
