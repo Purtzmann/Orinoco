@@ -6,6 +6,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="style.css">
    <link rel="stylesheet" href="all.min.css">
+   <script src="js/fiche.js" async></script>
    <title>Document</title>
 </head>
 <body>
@@ -36,22 +37,17 @@
       </div>   
    </header>
 
-   <section class="fiche">
-      <div class="fiche__bloc">
+   <main class="main" id="main">
+
+      <template class="fiche" id="fiche">
          <div class="fiche__principale">
             <div class="fiche__images">
-               <img src="https://picsum.photos/300/300" alt="" >
-            </div>
-            <div class="fiche__vignette">
-               <div><a href=""><img src="https://picsum.photos/70/70" alt="" ></a></div>
-               <div><a href=""><img src="https://picsum.photos/70/70" alt="" ></a></div>
-               <div><a href=""><img src="https://picsum.photos/70/70" alt="" ></a></div>
+               <img src="https://picsum.photos/300/300" alt="" id="img" >
             </div>
          </div>   
          <div class="fiche__details">
-            <h2>Titre produit</h2>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero pariatur 
-               possimus corporis facilis, laudantium ea aspernatur, distinctio magni fugit 
+            <h2 id="name">Titre produit</h2>
+            <p id="description">
                delectus laborum nam at totam fugiat eveniet, impedit doloribus blanditiis voluptas?
             </p>
             <div class="fiche_couleur">
@@ -62,7 +58,7 @@
                <option value="cat">Marron</option>
             </select>
             </div>
-            <p>Nombre de produits</p>
+            <p id=nombre>Nombre de produits</p>
 
             <div class="fiche__nombre">
                <button class="moins btn"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag-dash" viewBox="0 0 16 16">
@@ -76,14 +72,15 @@
                 </svg></button>
             </div>
 
-            <p class="produits__details--price">Prix total : 20€</p>
+            <p class="produits__details--price" id="price">Prix total : 20€</p>
 
             <div class="product__btn">
             <button class="product btn">Ajouter au panier</button>
          </div>
          </div>
-      </div>       
-   </section>
+      </template>
+
+   </main>
 
    <footer class="footer">
       <div class="footer__backTop">
