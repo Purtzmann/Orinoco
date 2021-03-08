@@ -5,73 +5,67 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="style.css">
-   <link rel="stylesheet" href="all.min.css">
+   <link rel="stylesheet" href="css/all.min.css">
    <script src="js/fiche.js" async></script>
    <title>Document</title>
 </head>
 <body>
    <header class="header">
       <div class="header__content">
-         <img src="https://picsum.photos/50/50" alt=""><p>BLABLABLA</p>
+         <a href="index.html" class="links"><img src="https://picsum.photos/50/50" alt=""></a>
          <div class="header__form">
             <input type="search" id="lieu" placeholder="" size="30" class="bar">
             <div class="form__btn"><i class="fas fa-search"></i></div>
          </div>
-         <div class="header__compte">
-            <i class="fas fa-user"></i>
-            <p>Mon compte</p>
-         </div>
-         <div class="header__panier">
-            <i class="fas fa-shopping-cart"></i>
-            <p>Mon panier</p>
-         </div>
-      </div>
-      <div class="header__naviguation">
-         <nav>
-            <ul>
-               <li>test</li>
-               <li>test</li>
-               <li>test</li>
-            </ul>
-         </nav>
-      </div>   
+         <a href="#" class="links">
+            <div class="header__compte">
+               <i class="fas fa-user"></i>
+               <p>Mon compte</p>
+            </div>
+         </a>
+         <a href="panier.html" class="links">
+            <div class="header__panier">
+               <i class="fas fa-shopping-cart"></i>
+               <p>Mon panier</p>
+            </div>
+         </a>
    </header>
 
    <main class="main" id="main">
 
-      <template class="fiche" id="fiche">
-         <div class="fiche__principale">
-            <div class="fiche__images">
-               <img src="https://picsum.photos/300/300" alt="" id="img" >
-            </div>
-         </div>   
+      <section class="fiche" id="fiche">
+        
+            <template class="fiche__template" id="fiche__template">
+               <div class="fiche__cards">
+                  <div class="fiche__principale">
+                     <div class="fiche__images">
+                        <img src="https://picsum.photos/300/300" alt="" id="img" >
+                     </div>
+                  </div>   
+                  <div class="fiche__details">
+                     <h2 id="name">Titre produit</h2>
+                     <p class ="description" id="description">
+                        delectus laborum nam at totam fugiat eveniet, impedit doloribus blanditiis voluptas?
+                     </p>
+                     <div class="fiche_couleur">
+                        <label for="colors">Choix de la couleur :</label>
+                        <select name="colors" id="color-select"></select>
+                     </div>
+                     <p id=nombre>Nombre de produits</p>
+                     <div class="fiche__nombre" id="fiche__nombre">
+                        <button class="btn minus-btn disabled" type="button">-</button>
+                        <input class="nbr" type="texte" value ="1" id="quantity">
+                        <button class="btn plus-btn disabled" type="button">+</button>
+                     </div>
+                     <p class="produits__details--price" id="price">Prix total : 20€</p>
+                     <div class="product__btn">
+                     <button class="product btn" id="panier" type="submit">Ajouter au panier</button>
+                     </div>
+                  </div>
+               </div>
+            </template>
 
-         <div class="fiche__details">
-            <h2 id="name">Titre produit</h2>
-
-            <p id="description">
-               delectus laborum nam at totam fugiat eveniet, impedit doloribus blanditiis voluptas?
-            </p>
-
-            <div class="fiche_couleur">
-               <label for="colors">Choix de la couleur :</label>
-               <select name="colors" id="color-select"></select>
-            </div>
-
-            <p id=nombre>Nombre de produits</p>
-
-            <div class="fiche__nombre" id="fiche__nombre">
-               
-            </div>
-
-            <p class="produits__details--price" id="price">Prix total : 20€</p>
-
-            <div class="product__btn">
-            <button class="product btn" id="panier" type="submit">Ajouter au panier</button>
-         </div>
-         </div>
-      </template>
-
+      </section>
    </main>
 
    <footer class="footer">

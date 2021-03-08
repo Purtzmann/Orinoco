@@ -5,7 +5,7 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="style.css">
-   <link rel="stylesheet" href="all.min.css">
+   <link rel="stylesheet" href="css/all.min.css">
    <script src="js/index.js" async></script>
    
    
@@ -14,7 +14,7 @@
 <body>
    <header class="header">
       <div class="header__content">
-         <img src="https://picsum.photos/50/50" alt=""><p>BLABLABLA</p>
+         <a href="index.html" class="links"><img src="https://picsum.photos/50/50" alt=""></a>
          <div class="header__form">
             <input type="search" id="lieu" placeholder="" size="30" class="bar">
             <div class="form__btn"><i class="fas fa-search"></i></div>
@@ -32,41 +32,30 @@
             </div>
          </a>
       </div>   
-      <div class="header__naviguation">
-         <nav>
-            <ul>
-               <li>test</li>
-               <li>test</li>
-               <li>test</li>
-            </ul>
-         </nav>
-      </div>   
    </header>
-   <section class="pub">
-      <div class="pub__fond"></div>
-   </section>
 
-   <main class="produits" id="produits">
+   <main class="main">
+      <section class="produits" id ="produits">
+         <template class="produits__template" id="produits__template">
 
-      <template class="produits" id="produits__product">
-         <div class="produits__product">
-            <a href="fiche.html" class="links">
-               <div class="produits__information">
-                     <div class="produits__images">
-                        <img src="https://picsum.photos/250/250" alt="" class="produits__img" id="img">
+            <div class="produits__cards">
+               <a href="fiche.html" class="links">
+                  <div class="produits__information">
+                        <div class="produits__images">
+                           <img src="https://picsum.photos/250/250" alt="" class="produits__img" id="img">
+                        </div>
+                     <div class="produits__details">
+                        <p class="produits__details--name" id="name">Nom du produit</p>
+                        <p class="produits__details--price" id="price">20€</p>
                      </div>
-                  <div class="produits__details">
-                     <p class="produits__details--name" id="name">Nom du produit</p>
-                     <p class="produits__details--price" id="price">20€</p>
                   </div>
+               </a>
+               <div class="produits__btn">
+                  <button class="product btn" id="panier" type="submit">Ajouter au panier</button>
                </div>
-            </a>
-            <div class="produits__btn">
-               <button class="product btn">Ajouter au panier</button>
             </div>
-         </div>   
-      </template>
-      
+         </template>
+      </section>  
    </main>
 
    <footer class="footer">

@@ -5,41 +5,159 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="style.css">
-   <link rel="stylesheet" href="all.min.css">
+   <link rel="stylesheet" href="css/all.min.css">
+   <script src="js/panier.js" async></script>
    <title>Document</title>
 </head>
 <body>
    <header class="header">
       <div class="header__content">
-         <img src="https://picsum.photos/50/50" alt=""><p>BLABLABLA</p>
+         <a href="index.html" class="links"><img src="https://picsum.photos/50/50" alt=""></a>
          <div class="header__form">
             <input type="search" id="lieu" placeholder="" size="30" class="bar">
             <div class="form__btn"><i class="fas fa-search"></i></div>
          </div>
-         <div class="header__compte">
-            <i class="fas fa-user"></i>
-            <p>Mon compte</p>
-         </div>
-         <div class="header__panier">
-            <i class="fas fa-shopping-cart"></i>
-            <p>Mon panier</p>
-         </div>
+         <a href="#" class="links">
+            <div class="header__compte">
+               <i class="fas fa-user"></i>
+               <p>Mon compte</p>
+            </div>
+         </a>
+         <a href="panier.html" class="links">
+            <div class="header__panier">
+               <i class="fas fa-shopping-cart"></i>
+               <p>Mon panier</p>
+            </div>
+         </a>
       </div>
-      <div class="header__naviguation">
-         <nav>
-            <ul>
-               <li>test</li>
-               <li>test</li>
-               <li>test</li>
-            </ul>
-         </nav>
-      </div>   
    </header>
 
-   <section class="panier">
- 
-   </section>
+   <section class="container">
+      <main class="main--panier" id="main">
+         <section class="panier" id="panier">
+               <template class="panier__template" id="panier__template">
 
+                  <div class="panier__cards">
+
+                     <div class="panier__principale">
+                        <div class="panier__images">
+                           <img src="https://picsum.photos/300/300" alt="" id="img" >
+                        </div>
+                     </div>
+
+                     <div class="panier__details">
+                        <h2 id="name">Titre produit</h2>
+                        <div class="panier_couleur">
+                           <p class="color">rouge</p>
+                        </div>
+                        <p id=nombre>Nombre de produits</p>
+                        <div class="panier__nombre" id="panier__nombre">
+                           <button class="btn minus-btn disabled" type="button">-</button>
+                           <input class="nbr" type="texte" value ="1" id="quantity">
+                           <button class="btn plus-btn disabled" type="button">+</button>
+                        </div>
+                        <p class="produits__details--price" id="price">Prix total : 20€</p>
+                     </div>
+                  </div>
+
+               </template>
+         </section>
+      </main>
+      <aside class="recapCommande">
+         <h2>Votre commande</h2>
+         <div class="recapCommande__prixTotal"><strong>Total: 58€</strong></div>
+         <div class="recapCommande__nombreArticles">Nombre d'articles dans le panier: 3</div>
+         <div class="recapCommande__formulaire">
+            <h2>Formulaire de commande</h2>
+            <form id=paiement>
+               <fieldset>
+               <legend>Votre identité</legend>
+            
+               <ol>
+                  <li>
+                     <label for=nom>Nom</label>
+                     <input  name=nom type=text placeholder="Nom" id="nom" required autofocus>
+                  </li>
+                  <li>
+                     <label for=nom>Prénom</label>
+                     <input  name=nom type=text placeholder="Prénom" id="prenom" required autofocus>
+                  </li>
+                  <li>
+                     <label for=email>Email</label>
+                     <input  name=email type=email placeholder="exemple@domaine.com" id="email" required>
+                  </li>
+                  <li>
+                     <label for=telephone>Téléphone</label>
+                     <input name=telephone type=tel id="telephone" placeholder="par ex&nbsp;: 0675500000000" required>
+                  </li>
+               </ol>
+               </fieldset>
+            
+               <fieldset>
+               <legend>Adresse de livraison</legend>
+                  <ol>
+                     <li>
+                     <label for=adresse>Adresse</label>
+                     <input  name=adresse id="adresse" required>
+                     </li>
+                     <li>
+                        <label for=ville>Ville</label>
+                        <input  name=ville id="ville" required>
+                        </li>
+                     <li>
+                     <label for=codepostal>Code postal</label>
+                     <input  name=codepostal type=text id="codePostal" required>
+                     </li>
+                     <li>
+                     <label for=pays>Pays</label>
+                     <input  name=pays type=text required>
+                     </li>
+                  </ol>
+               </fieldset>
+               <fieldset>
+               <legend>informations CB</legend>
+               <ol>
+                  <li>
+                     <fieldset>
+                     <legend>Type de carte bancaire</legend>
+                     <ol>
+                        <li>
+                           <input id=visa name=type_de_carte type=radio>
+                           <label for=visa>VISA</label>
+                        </li>
+                        <li>
+                           <input id=amex name=type_de_carte type=radio>
+                           <label for=amex>AmEx</label>
+                        </li>
+                        <li>
+                           <input id=mastercard name=type_de_carte type=radio>
+                           <label for=mastercard>Mastercard</label>
+                        </li>
+                     </ol>
+                     </fieldset>
+                  </li>
+                  <li>
+                  <label for=numero_de_carte>N° de carte</label>
+                     <input id=numero_de_carte name=numero_de_carte type=number required>
+                  </li>
+                  <li>
+                     <label for=securite>Code sécurité</label>
+                     <input id=securite name=securite type=number required>
+                  </li>
+                  <li>
+                     <label for=nom_porteur>Nom du porteur</label>
+                     <input id=nom_porteur name=nom_porteur type=text placeholder="Nom sur la carte" required>
+                  </li>
+               </ol>
+               </fieldset>
+            
+               <fieldset>
+               <button type=submit id="validationFormulaire">Je commande</button>
+               </fieldset>
+            </form>
+         </div>
+      </aside>
+   </section>
    <footer class="footer">
       <div class="footer__backTop">
          <a href="#"><p>Retour en haut</p></a>

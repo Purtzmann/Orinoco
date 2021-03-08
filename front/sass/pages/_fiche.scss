@@ -1,20 +1,18 @@
 .fiche{
+   padding: 1rem;
    display: flex;
-   justify-content: center;
-   background-color: violet;
-   &__bloc{
-      width: 90%;
+   flex-wrap: wrap;
+   align-items: center;
+   justify-content: space-evenly;
+   &__cards{
       background-color: white;
-      position: relative;
-      top: 5rem;
+      box-shadow: 0px 0px 9px 2px #bababa;
       display: flex;
-      flex-direction: row;
-      padding: 2rem;
-      background-color: white;
+      margin: 2rem;
    }
    &__images{
-      height: 300px;
-      width: 300px;
+      height: 500px;
+      width: 500px;
       overflow: hidden;
       display: flex;
       justify-content: center;
@@ -27,8 +25,19 @@
    }
    &__details{
       flex-direction: column;
-      width: 40%;
+      width: 70%;
       margin-left: 2rem;
+      display: flex;
+      justify-content: center;
+      h2{
+         font-size: 3rem;
+      }
+      .description{
+         font-size: 1.5rem;
+      }
+      .produits__details--price{
+         font-size: 1.5rem;
+      }
    }
    &__couleur{
       display: flex;
@@ -39,27 +48,17 @@
       flex-direction: row;
       height: 27px;
       width: 92px;
-      .moins{
-         margin-right: 0.5rem;
-         height: 27px;
-         padding: 5px;
-         border-radius: 50%;
+      .minus-btn{
+         margin-right: 1.5rem;
       }
       .nbr{
-         margin: 4px 15px -2px 9px;
-         height: 27px;
-         border-radius: 50%;
+         width: 1rem;
+         border: none;
+         font-size: 1.5rem;
+         height: 40px;
       }
-      .plus{
-         margin-right: 0.5rem;
-         height: 27px;
-         padding: 5px;
-         border-radius:50%;
+      .plus-btn{
+         margin-left: 1.5rem;
       }
    }
-}
-
-footer{
-   position: relative;
-   bottom: -10rem;
 }

@@ -12,7 +12,7 @@ const getInformations = fetch('http://localhost:3000/api/teddies/'+ id)
       data.then((infos) =>{
          
          //Création du template HTML
-         let template = document.querySelector("#fiche");
+         let template = document.querySelector("#fiche__template");
          let clone = document.importNode(template.content, true);
 
          let name = infos.name;
@@ -25,7 +25,7 @@ const getInformations = fetch('http://localhost:3000/api/teddies/'+ id)
          clone.getElementById("name").innerHTML = name;
          clone.getElementById("price").innerHTML = (price/100) + '€';
 
-         document.getElementById("main").appendChild(clone)
+         document.getElementById("fiche").appendChild(clone)
          
          //Selection de la couleur du produits
          let colors = (infos.colors);
@@ -40,52 +40,46 @@ const getInformations = fetch('http://localhost:3000/api/teddies/'+ id)
          });
 
          //Augmentation du nombre de produits
+
          
-         let nombre = document.querySelector('#fiche__nombre')
-
-         let less = document.createElement('input')
-         less.type ="button";
-         less.value = "-";
-         less.onclick = decNumber;
-         less.className = "btn";
-
-         let more = document.createElement('input')
-         more.type ="button";
-         more.value = "+";
-         more.onclick = incNumber;
-         more.className = "btn";
-
-         let nb = document.createElement('p')
-         nb.className = "nbr";
-         nb.id = "display";
-         nb.innerHTML ="1";
-
-         let amount = 1;
-         function incNumber() {
-            if (amount >= 1) {
-               amount++;
-            } else if (amount = 10) {
-               amount = amount;
-            }  
-         document.getElementById("display").innerHTML = amount; }
-         function decNumber() {
-            if (amount > 1) {
-                  --amount;
-            } else if (iamount = 1) {
-               amount = amount;
-            }
-         document.getElementById("display").innerHTML = amount;}
          
+         document.querySelector(".minus-btn").setAttribute("disabled", "disabled");
+         let valueCount
 
-         nombre.appendChild(less)
-         nombre.appendChild(nb)
-         nombre.appendChild(more)
+         document.querySelector(".plus-btn").addEventListener("click", function(){
+            valueCount = document.getElementById("quantity").value;
+            valueCount++;
+            document.getElementById("quantity").value = valueCount
+            if(valueCount > 1)
+               document.querySelector(".minus-btn").removeAttribute("disabled")
+            if(valueCount == 10)
+               document.querySelector(".plus-btn").setAttribute("disabled", "disabled")
+         })
+
+         document.querySelector(".minus-btn").addEventListener("click", function(){
+            valueCount = document.getElementById("quantity").value;
+            valueCount--;
+            document.getElementById("quantity").value = valueCount
+
+            if(valueCount == 1)
+               document.querySelector(".minus-btn").setAttribute("disabled", "disabled")
+            if(valueCount < 10)
+               document.querySelector(".plus-btn").removeAttribute("disabled")
+         })
+
+
+
+
 
          //Ajouter l'article au panier => dans le local storage
 
          const infoPanier = {
             identifiant: id,
-            quantité: amount,
+            quantite:1,
+            image: image,
+            description: description,
+            price: price,
+            name: name,
 
          }
 

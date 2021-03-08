@@ -1,0 +1,153 @@
+.container{
+   display: flex;
+   flex-direction: row;
+   max-width: 1440px;
+   margin: auto;
+   padding: 0 2rem;
+}
+
+.panier{
+   padding: 1rem;
+
+   &__cards{
+      background-color: white;
+      box-shadow: 0px 0px 9px 2px #bababa;
+      display: flex;
+      margin: 1rem;
+      width: 600px;
+   }
+   &__principale{
+      display: flex;
+      align-items: center;
+      margin-right: 20px;
+      margin-left: 20px;
+   }
+   &__images{
+      height: 130px;
+      width: 130px;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+   }
+   &__vignette{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-top: 1rem;
+   }
+   &__details{
+      flex-direction: column;
+      margin-left: 0rem;
+      display: flex;
+      justify-content: center;
+      line-height: 0px;
+      h2{
+         font-size: 1rem;
+         margin-bottom: 0px;
+      }
+      .produits__details--price{
+         font-size: 1rem;
+      }
+   }
+   &__couleur{
+      display: flex;
+      flex-direction: column;
+   }
+   &__nombre{
+      display: flex;
+      flex-direction: row;
+      height: 27px;
+      width: 92px;
+      .minus-btn{
+         margin-right: 1.5rem;
+      }
+      .nbr{
+         width: 1rem;
+         border: none;
+         font-size: 1.5rem;
+         height: 40px;
+      }
+      .plus-btn{
+         margin-left: 1.5rem;
+      }
+   }
+}
+
+.recapCommande{
+   background-color: white;
+   box-shadow: 0px 0px 9px 2px #bababa;
+   margin: 2rem;
+   padding: 1rem;
+   h2{
+      font-size: 2rem;
+      border-bottom: 1px solid gray;
+   }
+   &__prixTotal{
+      font-size: 1.5rem;
+   }
+   &__nombreArticles{
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+   }
+}
+
+form#paiement {
+   padding: 20px;
+}
+
+form#paiement fieldset {
+   margin-bottom: 10px;
+}
+
+form#paiement legend {
+   font-size: 1.3rem;
+   font-weight: bold;
+   padding-bottom: 4px;
+}
+
+form#paiement ol li {
+   list-style: none;
+
+}
+form#paiement ol ol li {
+   background: none;
+   border: none;
+   float: left;
+}
+
+form#paiement label {
+   float: left;
+   width: 110px;
+}
+form#paiement fieldset fieldset label {
+   background:none no-repeat left 50%;
+   line-height: 20px;
+   padding: 0 0 0 30px;
+   width: auto;
+}
+
+form#paiement fieldset fieldset label:hover {
+   cursor: pointer;
+}
+
+form#paiement input:not([type=radio]),
+form#paiement textarea {
+  background: #ffffff;
+  border: none;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -khtml-border-radius: 3px;
+  border-radius: 3px;
+  font: italic 13px Georgia, "Times New Roman", Times, serif;
+  outline: none;
+  padding: 5px;
+  width: 200px;
+}
+form#paiement input:not([type=submit]):focus,
+form#paiement textarea:focus {
+  background: #eaeaea;
+}
+form#paiement input[type=radio] {
+  float: left;
+  margin-right: 5px;
+}
