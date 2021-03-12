@@ -31,15 +31,35 @@
   border: none;
   width: 35rem;
 }
+@media screen and (min-width: 500px) {
+  .header__form .bar {
+    width: 12rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .header__form .bar {
+    width: 35rem;
+  }
+}
 .header__compte {
   display: flex;
   align-items: center;
   color: white;
 }
+@media screen and (min-width: 500px) {
+  .header__compte p {
+    display: none;
+  }
+}
 .header__panier {
   display: flex;
   align-items: center;
   color: white;
+}
+@media screen and (min-width: 500px) {
+  .header__panier p {
+    display: none;
+  }
 }
 .header i {
   font-size: larger;
@@ -158,7 +178,14 @@ body {
   background-color: white;
   box-shadow: 0px 0px 9px 2px #bababa;
   display: flex;
+  flex-direction: column;
   margin: 2rem;
+}
+@media screen and (min-width: 1240px) {
+  .fiche__cards {
+    display: flex;
+    flex-direction: row;
+  }
 }
 .fiche__images {
   height: 500px;
@@ -179,19 +206,27 @@ body {
   margin-left: 2rem;
   display: flex;
   justify-content: center;
+  padding: 2rem;
 }
 .fiche__details h2 {
   font-size: 3rem;
+  margin: 0;
 }
 .fiche__details .description {
   font-size: 1.5rem;
 }
 .fiche__details .produits__details--price {
+  font-size: 2rem;
+  font-weight: 600;
+}
+.fiche__details p {
   font-size: 1.5rem;
 }
-.fiche__couleur {
-  display: flex;
-  flex-direction: column;
+.fiche__couleur--couleur {
+  font-size: 1.5rem;
+}
+.fiche__couleur--option {
+  font-size: 1.5rem;
 }
 .fiche__nombre {
   display: flex;
@@ -227,14 +262,10 @@ body {
   background-color: white;
   box-shadow: 0px 0px 9px 2px #bababa;
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   margin: 1rem;
   width: 600px;
-}
-.panier__principale {
-  display: flex;
-  align-items: center;
-  margin-right: 20px;
-  margin-left: 20px;
 }
 .panier__images {
   height: 130px;
@@ -242,6 +273,7 @@ body {
   overflow: hidden;
   display: flex;
   justify-content: center;
+  border: 14px solid #f1f1f1;
 }
 .panier__vignette {
   display: flex;
@@ -249,18 +281,47 @@ body {
   justify-content: space-between;
   margin-top: 1rem;
 }
-.panier__details {
+.panier__details--gauche {
   flex-direction: column;
-  margin-left: 0rem;
   display: flex;
-  justify-content: center;
-  line-height: 0px;
+  line-height: 10px;
+  width: 40%;
 }
-.panier__details h2 {
+.panier__details--gauche h2 {
   font-size: 1rem;
   margin-bottom: 0px;
 }
-.panier__details .produits__details--price {
+.panier__details--droite {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  width: 30%;
+}
+.panier__details--droite h2 {
+  font-size: 1rem;
+  margin-bottom: 0px;
+}
+.panier__details--droite .produits__details--price {
+  font-size: 1.2rem;
+  margin-bottom: 0;
+}
+.panier__details--droite .produits__details--Totalprice {
+  font-size: 1.6rem;
+}
+.panier__details--droite .btn__suppr {
+  position: relative;
+  top: 0px;
+  left: 145px;
+  width: 30px;
+  height: 30px;
+  color: white;
+  font-weight: 900;
+  background-color: #ea0000;
+  border-radius: 5px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 1rem;
 }
 .panier__couleur {

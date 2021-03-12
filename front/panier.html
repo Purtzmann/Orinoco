@@ -6,7 +6,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="style.css">
    <link rel="stylesheet" href="css/all.min.css">
-   <script src="js/panier.js" async></script>
+   <script src="js/panier3.js" async></script>
    <title>Document</title>
 </head>
 <body>
@@ -41,12 +41,12 @@
 
                      <div class="panier__principale">
                         <div class="panier__images">
-                           <img src="https://picsum.photos/300/300" alt="" id="img" >
+                           <img src="https://picsum.photos/300/300" alt="" id="img" class="panier__img" >
                         </div>
                      </div>
 
-                     <div class="panier__details">
-                        <h2 id="name">Titre produit</h2>
+                     <div class="panier__details--gauche">
+                        <h2 class="panier__titre" id="name">Titre produit</h2>
                         <div class="panier_couleur">
                            <p class="color">rouge</p>
                         </div>
@@ -56,8 +56,13 @@
                            <input class="nbr" type="texte" value ="1" id="quantity">
                            <button class="btn plus-btn disabled" type="button">+</button>
                         </div>
-                        <p class="produits__details--price" id="price">Prix total : 20€</p>
                      </div>
+                     <div class="panier__details--droite">
+                        <button class="btn__suppr" id="btn__suppr">X</button>
+                        <p class="produits__details--price" id="price">Prix total : 20€</p>
+                        <p class="produits__details--Totalprice" id="price2">Prix total : 20€</p>
+                     </div>
+
                   </div>
 
                </template>
@@ -114,43 +119,6 @@
                      </li>
                   </ol>
                </fieldset>
-               <fieldset>
-               <legend>informations CB</legend>
-               <ol>
-                  <li>
-                     <fieldset>
-                     <legend>Type de carte bancaire</legend>
-                     <ol>
-                        <li>
-                           <input id=visa name=type_de_carte type=radio>
-                           <label for=visa>VISA</label>
-                        </li>
-                        <li>
-                           <input id=amex name=type_de_carte type=radio>
-                           <label for=amex>AmEx</label>
-                        </li>
-                        <li>
-                           <input id=mastercard name=type_de_carte type=radio>
-                           <label for=mastercard>Mastercard</label>
-                        </li>
-                     </ol>
-                     </fieldset>
-                  </li>
-                  <li>
-                  <label for=numero_de_carte>N° de carte</label>
-                     <input id=numero_de_carte name=numero_de_carte type=number required>
-                  </li>
-                  <li>
-                     <label for=securite>Code sécurité</label>
-                     <input id=securite name=securite type=number required>
-                  </li>
-                  <li>
-                     <label for=nom_porteur>Nom du porteur</label>
-                     <input id=nom_porteur name=nom_porteur type=text placeholder="Nom sur la carte" required>
-                  </li>
-               </ol>
-               </fieldset>
-            
                <fieldset>
                <button type=submit id="validationFormulaire">Je commande</button>
                </fieldset>

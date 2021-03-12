@@ -6,7 +6,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="style.css">
    <link rel="stylesheet" href="css/all.min.css">
-   <script src="js/fiche.js" async></script>
+   <script src="js/fiche2.js" async></script>
    <title>Document</title>
 </head>
 <body>
@@ -47,11 +47,11 @@
                      <p class ="description" id="description">
                         delectus laborum nam at totam fugiat eveniet, impedit doloribus blanditiis voluptas?
                      </p>
-                     <div class="fiche_couleur">
-                        <label for="colors">Choix de la couleur :</label>
-                        <select name="colors" id="color-select"></select>
+                     <div class="fiche__couleur">
+                        <label for="colors" class="fiche__couleur--couleur">Choix de la couleur :</label>
+                        <select name="colors" id="color-select" class="fiche__couleur--option"></select>
                      </div>
-                     <p id=nombre>Nombre de produits</p>
+                     <p id=nombre class="nombre">Nombre de produits</p>
                      <div class="fiche__nombre" id="fiche__nombre">
                         <button class="btn minus-btn disabled" type="button">-</button>
                         <input class="nbr" type="texte" value ="1" id="quantity">

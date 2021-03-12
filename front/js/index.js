@@ -1,10 +1,15 @@
 
 
-const getInformations = fetch('http://localhost:3000/api/teddies')
+const getInformations = fetch()
    .then((response) => {
+      console.log(response)
+
       const data = response.json();
-      console.log(data);
+      console.log(data)
+
       data.then((infos) =>{
+         console.log(infos)
+
          infos.forEach(info => {
 
             let name = info.name;
@@ -13,6 +18,10 @@ const getInformations = fetch('http://localhost:3000/api/teddies')
             let price = info.price;
             let amount = 1;
             let id = info._id;
+
+            
+
+            console.log(name)
 
             let template = document.querySelector("#produits__template");
             let clone = document.importNode(template.content, true);
@@ -43,3 +52,9 @@ const getInformations = fetch('http://localhost:3000/api/teddies')
       })
 })
 
+/*let name = [];
+            let image = [];
+            let description = [];
+            let price = [];
+            let amount = [];
+            let id = [];*/

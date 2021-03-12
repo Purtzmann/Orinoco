@@ -1,6 +1,9 @@
 
 
-   const objets = JSON.parse(localStorage.getItem('codeArticle'));
+   
+   console.log(JSON.parse(localStorage.getItem('produit'[0])))
+   
+   const objets = JSON.parse(localStorage.getItem('produit'));
    console.log(objets)
 
    
